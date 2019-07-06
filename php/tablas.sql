@@ -18,14 +18,6 @@ CREATE TABLE IF NOT EXISTS Imagenes(
     FOREIGN KEY (UsuarioId)
 );
 
-CREATE TABLE IF NOT EXISTS Publicaciones(
-    PublicacionId INT NOT NULL AUTO_INCREMENT,
-    Titulo VARCHAR (40) NOT NULL,
-    Mensaje TEXT (4000) NOT NULL,
-    Fecha DATETIME NOT NULL,
-    PRIMARY KEY (PublicacionId),
-    FOREIGN KEY (UsuarioId)
-);
 
 
 CREATE TABLE IF NOT EXISTS Comentarios(
@@ -35,19 +27,26 @@ CREATE TABLE IF NOT EXISTS Comentarios(
     PRIMARY KEY (ComentariosId)
 );
 
+CREATE TABLE IF NOT EXISTS Publicaciones(
+    PublicacionId INT NOT NULL AUTO_INCREMENT,
+    Titulo VARCHAR (40) NOT NULL,
+    Mensaje TEXT (4000) NOT NULL,
+    Fecha DATETIME NOT NULL,
+    PRIMARY KEY (PublicacionId),
+    FOREIGN KEY (UsuarioId)  REFERENCES Usuarios (UsuarioId),
+    FOREIGN KEY (VotosId) REFERENCES Votos (VotosId)
+); 
 
 CREATE TABLE IF NOT EXISTS Votos(
     VotosId INT NOT NULL AUTO_INCREMENT,
     Tipo BOOLEAN NOT NULL,
-    PRIMARY KEY (VotosId)
+    PublicacionId INT,
+    CategoriasId INT,
+    PRIMARY KEY (VotosId),
+    FOREIGN KEY (PublicacionId) REFERENCES Publicaciones (PublicacionId),
+    FOREIGN KEY (CategoriasId) REFERENCES Categorias (CategoriasId)
 );
 
-CREATE TABLE IF NOT EXISTS Temas(
-    TemasId INT NOT NULL AUTO_INCREMENT,
-    Nombre VARCHAR (30) NOT NULL,
-    Descripcion TEXT (100) NOT NULL,
-    PRIMARY KEY (VotosId)
-);
 
 CREATE TABLE IF NOT EXISTS Categorias(
     CategoriasId INT NOT NULL AUTO_INCREMENT,
@@ -58,4 +57,13 @@ CREATE TABLE IF NOT EXISTS Categorias(
     PRIMARY KEY (CategoriasId),
     FOREIGN KEY (PublicacionId) REFERENCES Publicaciones (PublicacionId),
     FOREIGN KEY (VotosId) REFERENCES Votos (VotosId)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS Temas(
+    TemasId INT NOT NULL AUTO_INCREMENT,
+    Nombre VARCHAR (30) NOT NULL,
+    Descripcion TEXT (100) NOT NULL,
+    PRIMARY KEY (VotosId)
 );
