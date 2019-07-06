@@ -25,34 +25,42 @@ session_start();
         <a class="navbar-brand" href="../paginas/inicio.php"><img src="../img/logo.jpg" width="40" height="40" class="imagen"></a>
         <!--MI CUENTA-->
         <div class="botones">
-            <a button class="btn" href="../php/foro.php">Foro</a></button>
+            <a button class="btn" href="../paginas/foro.php">Foro</a></button>
             <a button class="btn" href="../paginas/perfil.php">Mi cuenta</a></button>
             <a button class="btn" href="../php/logout.php">Cerrar sesión</a></button>
         </div>
     </nav>
-
+<br>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
+        <div class="col-2">
+            </div>
+            <div class="col-md-5 sm-2">
                 <form action="../php/subirfotos.php" method="post" enctype="multipart/form-data">
-                    Select image to upload:
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit">
+                <h2>Cargar foto de perfil</h2>
+                    <input type="file" class="btn" name="fileToUpload" id="fileToUpload"><br><br>
+                    <input type="submit" class="btn" value="Cargar" name="submit">
                 </form>
-
-
+             <br>
+            <h2>Acerca de ti</h2>
+                <form action="../php/edicion">
+                    <textarea required class="form-control" rows="2" cols="60" style="resize: none" placeholder="Hasta 140 caracteres."></textarea><br>
+                    <input type="submit" class="btn" value="Cargar" name="submit">
+                </form>
+                </div>
+<br>
+            <div class="col-md-2 sm-2"> 
+                <h2>Links externos</h2>
+                <form action="../php/edicion">
+                <textarea class="form-control" style="resize: none" placeholder="/twitter" id="post-red"></textarea><br>
+                <textarea class="form-control" style="resize: none" placeholder="/facebook" id="post-red"></textarea><br>
+                <textarea class="form-control" style="resize: none" placeholder="/instagram" id="post-red"></textarea><br>
+                <input type="submit" class="btn" value="Cargar" name="submit">    
+            </form>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
+    <br><br>
 
     <div class="footer">
         <p>Creado por ML para ComunidadIT. 2019.</p>

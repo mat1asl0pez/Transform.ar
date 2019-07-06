@@ -13,7 +13,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../estilos/guia.css">
+    <link rel="stylesheet" href="../estilos/foro.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>Trans.formar: Foro</title>
@@ -31,23 +31,116 @@ session_start();
     </nav>
 
     <!--FIJADOS-->
-    <br>
-    <div class="container fluid">
+    <br><br><br>
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1>Foro<h1>
-                        <p>Admin</p>
-                        <div class="card-body">
-                            <p>sjjsda</p>
-                        </div>
+                <h2>Avisos<h2>
+            </div>
+            <div class="card-body">
+                <div class="card text">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="acciones col-1">
+                                <div class="pin"><i class="fas fa-thumbtack"></i></div>
+                            </div>
 
-                        <p>Categorias</p>
-                        <div class="card-body">
-                            <p>sjjsda</p>
+                            <div class="col-8">
+                                <h4 class="card-title">FAQ/Reglas</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    </div>
+
+                    <div class="card text">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="acciones col-1">
+                                <div class="pin"><i class="fas fa-thumbtack"></i></div>
+                                </div>
+
+                                <div class="col-8">
+                                    <h4 class="card-title">Avisos importantes</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                        </div>
+                    </div>
+                </div>
+
+<!--Comunidad-->
+            </div>
+            <div class="col-12">
+                <h2>Comunidad<h2>
+            </div>
+            <div class="card-body">
+                <div class="card text">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="acciones col-1">
+                                <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
+                                <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
+                                <div class="comentar"><i class="fas fa-comment"></i></div>
+                            </div>
+
+                            <div class="col-8">
+                                <h4 class="card-title">Titulo</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    </div>
+                </div>
+
+                <div class="card text">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="acciones col-1">
+                            <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
+                                <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
+                                <div class="comentar"><i class="fas fa-comment"></i></div>
+                            </div>
+
+                            <div class="col-8">
+                                <h4 class="card-title">Titulo</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    </div>
+                </div>
+                <div class="card text">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="acciones col-1">
+                                <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
+                                <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
+                                <div class="comentar"><i class="fas fa-comment"></i></div>
+                            </div>
+
+                            <div class="col-8">
+                                <h4 class="card-title">Titulo</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    </div>
+                </div>
+                <div id="post-done">
+                </div>
             </div>
         </div>
     </div>
+    </div>
+    </div>
+
 
 
 
@@ -59,11 +152,11 @@ session_start();
                 <div class="card-body">
                     <h3>Crear post</h3>
                     <form action="../php/crearpost.php" method="post">
-                        <div class="Tpost">
+                        <div class="post">
                             <input type="text" required class="form-control" placeholder="Titulo" name="Titulo Post" id="post-title">
                         </div>
                         <br>
-                        <div class="Cpost">
+                        <div class="post">
                             <textarea required class="form-control" rows="7" cols="50" style="resize: none" name="Contenido post" placeholder="Texto" id="post-message"></textarea>
                         </div>
                         <br>
@@ -75,14 +168,7 @@ session_start();
     </div>
     <br>
 
-    <div class="container fluid">
-        <div class="row">
-            <div class="col-12">
-                <div id="post-done">
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <br>
     <br>

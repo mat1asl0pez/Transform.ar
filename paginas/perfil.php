@@ -25,8 +25,7 @@ session_start();
         <a class="navbar-brand" href="../paginas/inicio.php"><img src="../img/logo.jpg" width="40" height="40" class="imagen"></a>
         <!--MI CUENTA-->
         <div class="botones">
-            <a button class="btn" href="../php/foro.php">Foro</a></button>
-            <a button class="btn" href="../paginas/perfil.php">Mi cuenta</a></button>
+            <a button class="btn" href="../paginas/foro.php">Foro</a></button>
             <a button class="btn" href="../php/logout.php">Cerrar sesión</a></button>
         </div>
     </nav>
@@ -38,13 +37,27 @@ session_start();
             </div>
             <div class="col-5">
                 <p>foto de perfil</p>
-                <p>usuario</p>
-                <p>Forma parte de ... desde ..</p>
-                <p>recuadro descripción 140 caracteres </p>
+                <p>UsuarioID</p>
+                <p>Forma parte de ... desde ..DATETIME</p>
+                <div class="card text">
+                <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, pariatur officiis aperiam quidem incidunt amet, ipsa facere cupiditate ut sed blanditiis? Iste rerum ab dolor molestias dolorem reprehenderit odit aut.
+                </p>
+                </div>
+                </div>
             </div>
             <div class="col-2">
-                <p>posts</p>
-                <p>links otras redes</p>
+                <div class="card text">
+                <div class="card-body">
+                    <p>cantidad de posts idpublicaciones id usuario</p>
+                </div>
+                </div><br>
+                <div class="card text">
+                <div class="card-body">
+                    <p>links otras redes</p>
+                </div>
+                </div><br>
+                <a button class="btn" href="../paginas/editarperfil.php">Editar perfil</a></button>
             </div>
             <div class="col-2">
             </div>

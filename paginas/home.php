@@ -89,7 +89,8 @@ session_start();
 
                         <div class="modal-footer">
                             <button type="submit" class="btn" id="boton-loguear"><span>Iniciar
-                                    sesión</span></button>
+                                    sesión</span>
+                                </button>
                         </div>
                     </form>
                 </div>
