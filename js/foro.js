@@ -8,7 +8,7 @@ $(document).ready(function () {
             '<div class="acciones col-1">' +
             
             '<div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>'+
-            '<div class="votonegativo"><i class="fas fa-thumbs-down"></i></div>'+
+            '<div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>'+
             '<div class="comentar"><i class="fas fa-comment"></i></div>'+
 
             '</div>' +
