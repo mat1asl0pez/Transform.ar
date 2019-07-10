@@ -43,7 +43,7 @@ session_start();
                 </form>
              <br>
             <h2>Acerca de ti</h2>
-                <form action="../php/edicion">
+                <form action="../php/edicion" method="post">
                     <textarea required class="form-control" rows="2" cols="60" style="resize: none" placeholder="Hasta 140 caracteres."></textarea><br>
                     <input type="submit" class="btn" value="Cargar" name="submit">
                 </form>
@@ -51,7 +51,7 @@ session_start();
 <br>
             <div class="col-md-2 sm-2"> 
                 <h2>Links externos</h2>
-                <form action="../php/edicion">
+                <form action="../php/edicion" method="post">
                 <textarea class="form-control" style="resize: none" placeholder="/twitter" id="post-red"></textarea><br>
                 <textarea class="form-control" style="resize: none" placeholder="/facebook" id="post-red"></textarea><br>
                 <textarea class="form-control" style="resize: none" placeholder="/instagram" id="post-red"></textarea><br>

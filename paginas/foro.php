@@ -77,6 +77,7 @@ session_start();
             <div class="col-12">
                 <h2>Comunidad<h2>
             </div>
+            
             <div class="card-body">
                 <div class="card text">
                     <div class="card-body">
