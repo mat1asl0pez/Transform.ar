@@ -54,6 +54,8 @@ a:hover {
     width: 100%;
 }
 
+
+
 .button1 {
   background-color: rgb(93, 165, 233);
   border: none;
@@ -70,6 +72,10 @@ a:hover {
   cursor: pointer;
 }
 
+a.button2:hover,
+a.button2:active {
+  color:rgb(36, 118, 194);
+}
 .button1:hover {
   opacity: 1
 }
@@ -104,7 +110,15 @@ a.button2:active {
   text-align: center;
 }
 
+.fotoperfil{
+  width:95px;
+  height:90px;
+  border: solid 1px black;
+}
 
+.nombreuser{
+  font-size: 40px;
+}
 
 .footer {
   position: fixed;
