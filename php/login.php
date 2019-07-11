@@ -32,7 +32,7 @@
     if (password_verify($password, $usuario['Password'])) {
         // Si coinciden, guardo en sesion los datos del usuario
         $_SESSION["username"] = $username;
-        $_SESSION["user-id"] = $usuario["UsuarioId"];
+        $_SESSION["usuarioId"] = $usuario["UsuarioId"];
         
         // Por las dudas de que haya habido una sesion previa, borramos con unset
         // los datos guardados en la sesion de la comunidad seleccionada previamente
@@ -43,7 +43,7 @@
         header('Location: ../paginas/inicio.php');
     } else {
         // Si no coinciden, guardo un mensaje en sesion y redirijo a login
-       $_SESSION["message"] = "Usuario o contraseña incorrectos";
+        $_SESSION["message"] = "Usuario o contraseña incorrectos";
         header('Location: ../paginas/home.php'); 
     }
 ?>

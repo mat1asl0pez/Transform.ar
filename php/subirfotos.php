@@ -1,8 +1,11 @@
 <?php
+session_start();
+
+require("../php/conexion.php");
 $target_dir = "../img/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$imageFileType = strtolower(pathinfo($target_dir . basename($_FILES["fileToUpload"]["name"]),PATHINFO_EXTENSION));
+$target_file = $target_dir . $_SESSION["username"] . "." . $imageFileType;
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -37,10 +40,15 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-        header('Location: ../paginas/editarperfil.php');
+        $query="insert into imagenes(nombre, destino, usuarioid) values ('perfil','". $target_file ."','". $_SESSION["usuarioId"] ."')";
+        mysqli_query($conexion, $query);
+        echo mysqli_error($conexion);
+        header('Location: ../paginas/perfil.php');
 
-    } else {
+    } 
+    else {
         echo "Sorry, there was an error uploading your file.";
+        header('Location: ../paginas/perfil.php');
     }
     
 }

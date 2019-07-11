@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Imagenes(
     ImagenId INT NOT NULL AUTO_INCREMENT,
     Nombre VARCHAR (255),
     Destino VARCHAR(255),
-    UsuarioId INT,
+    UsuarioId INT UNIQUE,
     PRIMARY KEY (ImagenId),
     FOREIGN KEY (UsuarioId)
 );
@@ -60,6 +60,18 @@ CREATE TABLE IF NOT EXISTS Categorias(
     FOREIGN KEY (PublicacionId) REFERENCES Publicaciones (PublicacionId),
     FOREIGN KEY (VotosId) REFERENCES Votos (VotosId)
 );
+
+
+CREATE TABLE IF NOT EXISTS Edicion(
+    EdicionId INT NOT NULL AUTO_INCREMENT,
+    Descripcion TEXT NOT NULL,
+
+    UsuarioId INT;
+    PRIMARY KEY(EdicionId),
+    FOREIGN KEY(UsuarioId) REFERENCES Usuarios(UsuarioId)
+);
+
+
 
 
 
