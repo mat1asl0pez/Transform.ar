@@ -2,6 +2,11 @@
 require("../php/conexion.php");
 
 session_start();
+
+
+$queryusername = "select * from usuarios where usuarioid = " . $_SESSION["usuarioId"];
+$resul = mysqli_query($conexion, $queryusername);
+$columna = mysqli_fetch_array($resul);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +56,7 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
                     </div>
 
                     <div class="card text">
@@ -67,7 +72,7 @@ session_start();
                                 </div>
                             </div>
                         </div>
-                        <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                        <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
                         </div>
                     </div>
                 </div>
@@ -94,7 +99,7 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    <div class="card-header">Posteado por USUARIOID(admin) el <?php echo $columna["Fecha"];?>
                     </div>
                 </div>
 
@@ -113,7 +118,7 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
                     </div>
                 </div>
                 <div class="card text">
@@ -122,7 +127,7 @@ session_start();
                             <div class="acciones col-1">
                                 <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
                                 <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
-                                <div class="comentar"><i class="fas fa-comment"></i></div>
+                                <div class="comentar"><i class="fas fa-comment" id="comentar"></i></div>
                             </div>
 
                             <div class="col-8">
@@ -131,9 +136,12 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class="card-header">Posteado por USUARIOID(admin) hace DATETIME
+                    <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
                     </div>
+
+                    <div id="comentario">
                 </div>
+                
                 <div id="post-done">
                 </div>
             </div>

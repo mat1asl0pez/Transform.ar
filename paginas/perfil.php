@@ -2,12 +2,24 @@
 require("../php/conexion.php");
 
 session_start();
+$query = "select Destino from imagenes where usuarioid = " . $_SESSION["usuarioId"];
+$resultados = mysqli_query($conexion, $query);
+$fila = mysqli_fetch_array($resultados);
+
+$queryusername = "select * from usuarios where usuarioid = " . $_SESSION["usuarioId"];
+$resul = mysqli_query($conexion, $queryusername);
+$columna = mysqli_fetch_array($resul);
+
+$querylink = "select * from edicion where usuarioid = " . $_SESSION["usuarioId"];
+$resull = mysqli_query($conexion, $querylink);
+$linea = mysqli_fetch_array($resull);
+
 ?>
 
 <!DOCTYPE html>
 <html>
 
-<head>
+<head>s
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -36,30 +48,21 @@ session_start();
             <div class="col-2">
             </div>
             <div class="col-5">
-                <p>foto de perfil</p>
-                <p>UsuarioID</p>
-                <p>Forma parte de ... desde ..DATETIME</p>
+                <div class="nombreuser">
+                    <img class="fotoperfil" src ="<?php echo $fila["Destino"];?>">
+                    <?php echo $columna["Username"];?>
+                </div>
+                <br>
+                <p>Forma parte desde <?php echo $columna["Fecha"];?></p>
                 <div class="card text">
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, pariatur officiis aperiam quidem incidunt amet, ipsa facere cupiditate ut sed blanditiis? Iste rerum ab dolor molestias dolorem reprehenderit odit aut.
-                </p>
+                    <p ><?php echo $linea["Descripcion"];?></p>
                 </div>
                 </div>
-            </div>
-            <div class="col-2">
-                <div class="card text">
-                <div class="card-body">
-                    <p>cantidad de posts idpublicaciones id usuario</p>
-                </div>
-                </div><br>
-                <div class="card text">
-                <div class="card-body">
-                    <p>links otras redes</p>
-                </div>
-                </div><br>
+                <br>
                 <a button class="btn" href="../paginas/editarperfil.php">Editar perfil</a></button>
             </div>
-            <div class="col-2">
+            <div class="col-4">
             </div>
         </div>
     </div>
