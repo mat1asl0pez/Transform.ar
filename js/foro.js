@@ -1,5 +1,31 @@
 $(document).ready(function () {
 
+
+
+
+    $("#comentar").click(function () {
+        $("#comentario").html(
+            '<div class="card text bg-primary mb-3">' +
+            '<i class="fas fa-times" id="cerrar"></i> '+
+            '<div class="card-body">' +
+            '<div class="Tpost">' +
+            '<input type="text" name="Titulo Post" id="post-title">' +
+            '</div>' +
+            '<div class="Cpost">' +
+            '<textarea name="Contenido post" id="post-message"></textarea>' +
+            '<div class="container-fluid row">' +
+            '<div class="offset-md-10 offset-sm-6">' +
+            '<br>'+
+            '<button type="submit" class="button" id="post-button"><span id="contenidoPostear">Postear</span></button>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+            ).toggle();
+         
+     );
+
+
     $("#post-button").click(function () {
         $("#post-done").prepend(
             '<div class="card text">' +
@@ -24,11 +50,12 @@ $(document).ready(function () {
             '</div>' +
             '</div>' +
             '</div>' +
-            '<div class="card-header">Posteado por USUARIOID hace DATETIME</div>' +
+            '<div class="card-header">Posteado por <?php echo $columna["Username"];?> hace <?php echo $columna["Fecha"];?></div>' +
             '</div>'
             
         );
-       
+
+
     });
 });
 
