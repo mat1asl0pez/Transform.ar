@@ -10,8 +10,8 @@ $queryusername = "select * from usuarios where usuarioid = " . $_SESSION["usuari
 $resul = mysqli_query($conexion, $queryusername);
 $columna = mysqli_fetch_array($resul);
 
-$querylink = "select * from edicion where usuarioid = " . $_SESSION["usuarioId"];
-$resull = mysqli_query($conexion, $querylink);
+$querydescripcion = "select * from edicion where usuarioid = " . $_SESSION["usuarioId"];
+$resull = mysqli_query($conexion, $querydescripcion);
 $linea = mysqli_fetch_array($resull);
 
 ?>
@@ -19,7 +19,7 @@ $linea = mysqli_fetch_array($resull);
 <!DOCTYPE html>
 <html>
 
-<head>s
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">

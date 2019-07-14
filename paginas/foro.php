@@ -39,31 +39,38 @@ $columna = mysqli_fetch_array($resul);
     <br><br><br>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-                <h2>Avisos<h2>
+            <div class="col-2">
             </div>
-            <div class="card-body">
-                <div class="card text">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="acciones col-1">
-                                <div class="pin"><i class="fas fa-thumbtack"></i></div>
-                            </div>
 
-                            <div class="col-8">
-                                <h4 class="card-title">FAQ/Reglas</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
-                    </div>
-
+            <div class="col-8">
+                <div class="card-body">
                     <div class="card text">
                         <div class="card-body">
                             <div class="row">
                                 <div class="acciones col-1">
-                                <div class="pin"><i class="fas fa-thumbtack"></i></div>
+                                    <div class="pin"><i class="fas fa-thumbtack"></i>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <h4 class="card-title">FAQ/Reglas</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"]; ?>
+                    </div>
+                </div>
+
+
+                <div class="card-body">
+                    <div class="card text">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="acciones col-1">
+                                    <div class="pin"><i class="fas fa-thumbtack"></i></div>
                                 </div>
 
                                 <div class="col-8">
@@ -72,83 +79,79 @@ $columna = mysqli_fetch_array($resul);
                                 </div>
                             </div>
                         </div>
-                        <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
+                        <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"]; ?>
                         </div>
                     </div>
-                </div>
-
-<!--Comunidad-->
-            </div>
-            <div class="col-12">
-                <h2>Comunidad<h2>
-            </div>
-            
-            <div class="card-body">
-                <div class="card text">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="acciones col-1">
-                                <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
-                                <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
-                                <div class="comentar"><i class="fas fa-comment"></i></div>
-                            </div>
-
-                            <div class="col-8">
-                                <h4 class="card-title">Titulo</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header">Posteado por USUARIOID(admin) el <?php echo $columna["Fecha"];?>
-                    </div>
-                </div>
-
-                <div class="card text">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="acciones col-1">
-                            <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
-                                <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
-                                <div class="comentar"><i class="fas fa-comment"></i></div>
-                            </div>
-
-                            <div class="col-8">
-                                <h4 class="card-title">Titulo</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
-                    </div>
-                </div>
-                <div class="card text">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="acciones col-1">
-                                <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
-                                <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
-                                <div class="comentar"><i class="fas fa-comment" id="comentar"></i></div>
-                            </div>
-
-                            <div class="col-8">
-                                <h4 class="card-title">Titulo</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-header">Posteado por (admin) el <?php echo $columna["Fecha"];?>
-                    </div>
-
-                    <div id="comentario">
-                </div>
-                
-                <div id="post-done">
                 </div>
             </div>
+            <div class="col-2"></div>
         </div>
     </div>
+
+    <hr>
+    <!--Comunidad-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-8">
+
+                <div class="card-body">
+                    <div class="card text">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="acciones col-1">
+                                    <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
+                                    <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
+                                    <div class="comentar"><i class="fas fa-comment"></i></div>
+                                </div>
+
+                                <div class="col-8">
+                                    <h4 class="card-title">Titulo</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">Posteado por USUARIOID el <?php echo $columna["Fecha"]; ?>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="card text">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="acciones col-1">
+                                    <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
+                                    <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
+                                    <div class="comentar" id="comentar"><i class="fas fa-comment"></i></div>
+                                </div>
+
+                                <div class="col-8">
+                                    <h4 class="card-title">Titulo</h4>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">Posteado por USUARIOID el <?php echo $columna["Fecha"]; ?>
+                    </div>
+                </div>
+
+
+
+                <div id="comentario">
+                </div>
+
+                <div id="post-done">
+                </div>
+
+            </div>
+
+            <div class="col-2"></div>
+        </div>
     </div>
-    </div>
+
 
 
 
@@ -176,14 +179,8 @@ $columna = mysqli_fetch_array($resul);
         </div>
     </div>
     <br>
-
-
-
     <br>
     <br>
-
-
-
 
     <div class="footer">
         <p>Creado por ML para ComunidadIT. 2019.</p>
