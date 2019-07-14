@@ -1,65 +1,40 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $('#link1').hide();
 });
-$(document).ready(function () {
+$(document).ready(function() {
     $('#link2').hide();
 });
-$(document).ready(function () {
+$(document).ready(function() {
     $('#link3').hide();
 });
-$(document).ready(function () {
+$(document).ready(function() {
     $('#link4').hide();
 });
-$(document).ready(function () {
-    $('#link5').hide();
-});
-$(document).ready(function () {
-    $('#link6').hide();
-});
 
-$(document).ready(function () {
-    $("#ley").click(function () {
+
+$(document).ready(function() {
+    $("#ley").click(function() {
         $("#link1").show();
+        $("#link2").hide();
+        $("#link3").hide();
+        $("#link4").hide();
     });
-    $("#hormonizacion").click(function () {
+    $("#hormonizacion").click(function() {
         $("#link2").show();
+        $("#link1").hide();
+        $("#link3").hide();
+        $("#link4").hide();
     });
-    $("#interv").click(function () {
+    $("#interv").click(function() {
         $("#link3").show();
+        $("#link1").hide();
+        $("#link2").hide();
+        $("#link4").hide();
     });
-    $("#consul").click(function () {
+    $("#espacios").click(function() {
         $("#link4").show();
+        $("#link1").hide();
+        $("#link2").hide();
+        $("#link3").hide();
     });
-    $("#prof").click(function () {
-        $("#link5").show();
-    });
-    $("#espacios").click(function () {
-        $("#link6").show();
-    });
-
-/*****************************/
-
-    if ($("#actividad").is(":visible")) {
-        $("#actividad").hide();
-        $("#inboxdestino").show();
-    } else {
-        $("#actividad").show();
-        $("#inboxdestino").hide();
-    }
-    if ($("#crearmensaje").is(":visible")) {
-        $("#crearmensaje").hide();
-    }
-});
-
-$(document).on("click", "#enviarmensajedestino", function () {
-    if ($("#inboxdestino").is(":visible")) {
-        $("#inboxdestino").hide();
-        $("#crearmensaje").show();
-    }
-});
-
-$("#cerrar").click(function () {
-    $("#crearmensaje").hide();
-
-    $("#inboxdestino").show()
 });
