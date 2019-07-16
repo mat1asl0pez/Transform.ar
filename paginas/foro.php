@@ -102,7 +102,6 @@ $columna = mysqli_fetch_array($resul);
                             <div class="row">
                                 <div class="acciones col-1">
                                     <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
-                                    <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
                                     <div class="comentar"><i class="fas fa-comment"></i></div>
                                 </div>
 
@@ -111,9 +110,11 @@ $columna = mysqli_fetch_array($resul);
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
-                    <div class="card-header">Posteado por USUARIOID el <?php echo $columna["Fecha"]; ?>
+                    <div class="card-header">Posteado por <?php echo $columna["Username"]; ?> el <?php echo $columna["Fecha"]; ?>
                     </div>
                 </div>
 
@@ -123,28 +124,54 @@ $columna = mysqli_fetch_array($resul);
                             <div class="row">
                                 <div class="acciones col-1">
                                     <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
-                                    <div class="votonegativo"><i class="fas fa-thumbs-down"></i></div><br>
                                     <div class="comentar" id="comentar"><i class="fas fa-comment"></i></div>
                                 </div>
 
                                 <div class="col-8">
                                     <h4 class="card-title">Titulo</h4>
                                     <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos maiores consequatur voluptatum, molestiae, repellat sed officiis fugiat blanditiis modi libero dolores nulla tempora esse exercitationem nisi, distinctio et inventore.</p>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-header">Posteado por USUARIOID el <?php echo $columna["Fecha"]; ?>
+                    <div class="card-header">Posteado por <?php echo $columna["Username"]; ?> el <?php echo $columna["Fecha"]; ?>
                     </div>
                 </div>
 
 
+                <?php 
 
-                <div id="comentario">
-                </div>
+                $query = "SELECT * from Publicaciones";
 
-                <div id="post-done">
+                $posteo = mysqli_query($conexion, $query);
+               
+                
+                while($posteoforo = mysqli_fetch_array($posteo)) {
+                    ?>
+
+                <div class="card text">
+                    <div class="card-body container-fluid">
+                        <div class="row">
+                            <div class="acciones col-1">
+                                <div class="votopositivo"><i class="fas fa-thumbs-up"></i></div>
+                                <div class="comentar" id="comentar"><i class="fas fa-comment"></i></div>
+
+                            </div>
+
+                            <div class="col-6">
+                                <h4 class="card-title"><?php echo $posteoforo["Titulo"] ?>
+                                </h4>
+                                <p class="card-text"><?php echo $posteoforo["Mensaje"] ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header">Posteado por <?php echo $columna["Username"] ?> hace <?php echo $posteoforo["Fecha"] ?></div>
                 </div>
+                <?php
+            }
+            ?>
 
             </div>
 
@@ -152,7 +179,7 @@ $columna = mysqli_fetch_array($resul);
         </div>
     </div>
 
-
+    </div>
 
 
 
@@ -165,14 +192,14 @@ $columna = mysqli_fetch_array($resul);
                     <h3>Crear post</h3>
                     <form action="../php/crearpost.php" method="post">
                         <div class="post">
-                            <input type="text" required class="form-control" placeholder="Titulo" name="Titulo Post" id="post-title">
+                            <input type="text" required class="form-control" placeholder="Titulo" name="titulopost" id="post-title">
                         </div>
                         <br>
                         <div class="post">
-                            <textarea required class="form-control" rows="7" cols="50" style="resize: none" name="Contenido post" placeholder="Texto" id="post-message"></textarea>
+                            <textarea required class="form-control" rows="7" cols="50" style="resize: none" name="contenidopost" placeholder="Texto" id="post-message"></textarea>
                         </div>
                         <br>
-                        <button type="button" class="btn btn-success" id="post-button">Postear</button>
+                        <button type="button" class="btn btn-success" name="botonpostear" id="post-button">Postear</button>
                     </form>
                 </div>
             </div>
@@ -192,7 +219,7 @@ $columna = mysqli_fetch_array($resul);
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src="../js/foro.js">
+    <script src="">
     </script>
 </body>
 
